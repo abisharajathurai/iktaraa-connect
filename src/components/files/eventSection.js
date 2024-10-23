@@ -30,7 +30,7 @@ const EventSection = () => {
             {
               data.map((item) => (
                 <div className='inline-flex  items-center gap-2 ' key={item.id}>
-                <div className="md:w-[56px] w-[39px] h-[38px]  rounded-full bg-dm_darkBlue text-white flex justify-center items-center text-f24  font-semibold">
+                <div className="md:w-[60px] w-[39px] h-[38px]  rounded-full bg-dm_darkBlue text-white flex justify-center items-center text-f24  font-semibold">
                         {item.count}
                       </div>
                       <div className="font-semibold text-f22  text-dm_darkBlue">

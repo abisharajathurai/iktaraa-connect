@@ -73,6 +73,7 @@ body {
     --dm_pink: hsla(348, 74%, 57%, 1);
     --dm_lightBlue:hsla(204, 21%, 96%, 1);
     --dm_darkBlue:hsla(256, 50%, 24%, 1);
+    --dm_lightGray:hsla(213, 15%, 85%, 1);
   }
   .dark {
     --background: 240 10% 3.9%;

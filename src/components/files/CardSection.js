@@ -1,4 +1,6 @@
 import { Card } from "../ui/card"
+import { Separator } from "../ui/separator"
+import FilterSection from "./FilterSection"
 const Data=[
   {
     id:1,
@@ -36,7 +38,7 @@ const Data=[
 const CardSection = () => {
   return (
     <div className="bg-dm_lightBlue">
-      <div className="container mx-auto py-[20px]">
+      <div className="container mx-auto pt-[20px] pb-[10px] ">
        <div className=" font-bold text-dm_text leading-[32px] text-f24">
         Events by Category
       </div> 
@@ -53,6 +55,8 @@ const CardSection = () => {
         ))}
       </div>
       </div>
+     <Separator className='border-1 border-[rgba(0, 0, 0, 0.2)]'/>
+      <FilterSection/>
     </div>
   )
 }

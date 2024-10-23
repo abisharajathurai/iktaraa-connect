@@ -49,6 +49,9 @@ module.exports = {
   			dm_darkBlue: {
   				DEFAULT: 'var(--dm_darkBlue)'
   			},
+			dm_lightGray: {
+                DEFAULT: 'var(--dm_lightGray)'
+			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
