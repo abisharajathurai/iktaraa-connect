@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
 import { Card, CardContent } from '../ui/card'
 import CustomButton from './CustomButton'
@@ -62,14 +62,20 @@ const data=[
 ]
 
 const CarousalSection = () => {
+    const [selectedCard, setSelectedCard] = useState(data[0].id);
+    const handleCardClick = (id) => {
+        setSelectedCard(id);
+      };
   return (
     <div className='container mx-auto my-[20px]'>
       <Carousel>
       <CarouselContent>
       {
                     data.map((item)=>(
-          <CarouselItem key={item.id} className='md:basis-1/5  sm:basis-1/3 default:basis-1/12 ' >
-                        <Card className=' rounded-[8px] ' >
+          <CarouselItem key={item.id} className='md:basis-1/5  sm:basis-1/3 default:basis-1/12 ' onClick={() => handleCardClick(item.id)}>
+                        <Card className={`rounded-[8px] cursor-pointer  ${
+                  selectedCard === item.id ? 'shadow-xl' : 'shadow-none'
+                }`} >
                         <div className='relative'>
                            <div>
                             <img src={item.image} alt='image' className='w-[100%] object-contain'/>
